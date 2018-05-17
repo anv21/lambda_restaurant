@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700|Lato|Open+Sans|Yeseva+One');
+
+:root {
+    --container-width: 1250px;
+    --header-height: 126px;
+    --header-link-top-border: 4px;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 1600px;
+    background: black;
+}
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    left: 0;
+    /*width: 1208px;*/
+    /*display: grid;*/
+    /*grid-template-columns: 155px 725px 115px;*/
+    position: fixed;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+
+    /*padding: 48px 217px 34px 174px;*/
+    z-index: 1;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    height: calc(var(--header-height) - 4px);
+    margin-bottom: 4px;
+}
+
+.header-container > * {
+    margin: 0;
+
+}
+
+.header-logo {
+    flex-basis: 75px;
+    padding-left: 4px;
+}
+
+.header-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: 12px;
+}
+
+.menu-item {
+    margin: 0;
+    padding: 0 20px 0 15px;
+}
+
+.menu-item a {
+    outline: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 700;
+    display: inline-block;
+    border-top: var(--header-link-top-border) solid transparent;
+    height: 100%;
+    line-height: calc(var(--header-height) - var(--header-link-top-border));
+    transition: border-top-color ease-in-out 0.2s;
+    padding: 0 8px;
+}
+
+.menu-item a:hover {
+    border-top-color: #fff;
+}
+
+.menu-item:last-child {
+    padding-right: 0;
+}
+
+.header-social {
+    flex-basis: 95px;
+    margin-right: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-social > a {
+    margin: 0;
+    display: inline-block;
+    /*margin-right: 10px;*/
+    background-image: url('../image/Social.png');
+    width: 25px;
+    height: 25px;
+}
+
+.header-social > a.youtube-yellow {
+    width: 23px;
+}
+
+.header-social > a.fb-yellow {
+    width: 29px;
+}
+
+.twitter-yellow {
+    background-position: -7px;
+}
+
+.youtube-yellow {
+    background-position: -41px;
+}
+
+.fb-yellow {
+    background-position: -70px;
+}
+
+.promo {
+    background-image: url('../image/bg_promo.png');
+    height: 370px;
+    padding-top: 213px;
+    padding-bottom: 166px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 90px;
+    color: white;
+    font-family: 'Yeseva One', cursiv;
+    text-shadow: 2px 2px rgba(0, 0, 0, .5);
+    font-weight: 300;
+    line-height: 120px;
+}
+
+.promo-decor {
+    width: 232px;
+    display: block;
+    margin: 0 auto;
+    padding: 21px 0;
+    position: relative;
+    left: 3px;
+}
+
+.promo-action-btn {
+    position: relative;
+    left: 555px;
+    top: 12px;
+    display: inline-block;
+    margin: 0 27px 0 0;
+    padding: 19px 7px 16px 10px;
+    text-align: center;
+    /*height: 57px;*/
+    width: 210px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid black;
+    transition: background-color ease-in-out 0.3s;
+}
+
+.promo-action-btn:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.promo-action-btn:last-child {
+    margin: 0;
+}
+
+.promo-action-btn.promo-action-btn-transparent {
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px solid white;
+}
+
+.promo-action-btn.promo-action-btn-transparent:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.about.wrapper {
+    height: 710px;
+    background: url('../image/pattern.png') repeat,
+    url("../image/background.png") no-repeat;
+    padding-left: 285px;
+    padding-right: 175px;
+    display: grid;
+    grid-template-columns: 430px 710px;
+    grid-gap: 60px;
+    text-align: center;
+}
+
+.about-text {
+    padding: 100px 0;
+}
+
+.text-title {
+    color: #cc9900;
+    font-size: 36px;
+    font-family: 'Yeseva One', cursiv;
+    font-weight: 300;
+    text-align: center;
+}
+
+.about-divider {
+    padding: 15px 0 25px 0;
+}
+
+.about-text p {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: rgb(120, 120, 120);
+    line-height: 24px;
+}
+
+.about-cook-img {
+    position: relative;
+    top: 47px;
+    left: 35px;
+}
+
+.about-dish-img {
+    position: relative;
+    top: 55px;
+    right: 81px;
+}
+
+.ingredients {
+    height: 758px;
+    background-image: url("../image/bg_ingr.png");
+}
+
+.ingredients-container {
+    width: 430px;
+    height: 478px;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 77px 70px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 300px;
+}
+
+.ingredients-heading,
+.reviews-heading {
+    font-size: 36px;
+    font-family: 'Yeseva One', cursiv;
+    font-weight: 300;
+}
+
+.ingredients-divider {
+    padding: 15px 0 20px 0;
+}
+
+.ingredients-text {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    line-height: 24px;
+    margin-top: 1px;
+    margin-bottom: 65px;
+}
+
+.ingredient-img {
+    display: inline-block;
+    border: 5px solid rgba(89, 78, 66, .9);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 24px;
+    background-repeat: no-repeat;
+}
+
+.ingredient-img-1 {
+    background-image: url("../image/image1_ingr.png");
+    background-position-x: -32px;
+    background-position-y: -33px;
+}
+
+.ingredient-img-2 {
+    background-image: url("../image/image2_ingr.png");
+    background-position-x: -42px;
+    background-position-y: -85px;
+}
+
+.ingredient-img-3 {
+    background-image: url("../image/image3_ingr.png");
+    background-position-x: -43px;
+    background-position-y: -12px;
+}
+
+.ingredient-img:last-child {
+    margin: 0;
+}
+
+.food-menu {
+    background: url('../image/pattern-menu.png') repeat, url("../image/background-menu.png") no-repeat;
+    height: 794px;
+    padding: 100px 285px;
+    display: flex;
+    flex-direction: row;
+}
+
+.food-menu .text-title {
+    text-align: center;
+}
+
+.food-menu-row {
+    flex: 1;
+}
+
+.food-menu-row:first-child {
+    position: relative;
+    left: -3px;
+}
+
+.food-menu-row:last-child {
+    padding-left: 164px;
+}
+
+.food-menu-kind {
+    margin-bottom: 64px;
+}
+
+.food-menu-decor {
+    background-image: url("../image/Divider.png");
+    background-repeat: no-repeat;
+    width: 246px;
+    height: 49px;
+    margin-top: 15px;
+}
+
+.food-menu-item {
+    /*padding-top: 9px;*/
+    margin-bottom: 32px;
+}
+
+.food-menu-item-special-mark {
+    background-image: url("../image/bg-special.png");
+    color: white;
+    padding: 2px 7px;
+    font-size: 14px;
+    width: 55px;
+    margin-right: 0;
+    margin-bottom: -18px;
+    position: relative;
+    top: -24px;
+    left: 8px;
+    text-align: center;
+}
+
+.food-menu-item-special {
+    border: 1px solid #cc9900;
+    padding: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    top: -8px;
+    left: -6px;
+    width: calc(100% + 5px);
+}
+
+.food-menu-item-special .food-menu-item {
+    margin-bottom: 0;
+}
+
+.food-menu-item-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cc9900;
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+
+.food-menu-item-title > * {
+    font-size: 21px;
+    font-family: 'Yeseva One', cursiv;
+    font-weight: 300;
+    text-align: left;
+    /*line-height: 15px;*/
+    color: #cc9900;
+    margin: 0;
+}
+
+.food-menu-item p {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    margin-top: 8px;
+}
+
+.reviews {
+    height: 558px;
+    background-image: url("../image/bg-reviews.png");
+    padding: 100px 0;
+}
+
+.reviews-container {
+    width: 630px;
+    height: 415px;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    text-align: center;
+    padding: 42px 70px 100px;
+}
+
+.reviews-divider {
+    padding-top: 17px;
+    padding-bottom: 20px;
+}
+
+.reviews-container p {
+    font-size: 25px;
+    font-family: "Gentium Book Basic", serif;
+    font-weight: 700;
+    line-height: 44px;
+    margin-bottom: 36px;
+}
+
+.reviews-container span {
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+}
+
+.reviews-container:before {
+    content: url("../image/quotes.png");
+    position: relative;
+    right: 340px;
+    top: 130px;
+}
+
+.reservation {
+    height: 530px;
+    background: url('../image/pattern.png') repeat,
+    url("../image/background-reserv.png") no-repeat;
+    padding: 80px 270px 100px 215px;
+}
+
+.reservation-img:first-child {
+    margin-right: 25px;
+}
+
+.reservation-form {
+    position: relative;
+    height: 507px;
+    width: 430px;
+    bottom: 545px;
+    left: 327px;
+    text-align: center;
+}
+
+.reservation-img {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.reservation-divider {
+    padding-top: 15px;
+    padding-bottom: 23px;
+}
+
+.reservation-form p {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+input {
+    min-width: 165px;
+    /*height: 37px;*/
+    min-height: 30px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    padding: 3px 15px;
+}
+
+input:focus {
+    border: 1px solid #cc9900;
+    padding: 3px 15px;
+    outline: none;
+    min-height: 32px;
+    min-width: 169px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    max-width: 430px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.form-input:last-child {
+    margin-right: 0;
+}
+
+label {
+    font-size: 14px;
+    font-family: OpenSans, sans-serif;
+    color: #cc9900;
+    font-weight: 600;
+    padding: 7px 0;
+    margin: 25px 0 0 0;
+    text-align: left;
+}
+
+.form-row-last label {
+    margin: 10px 0 0 0;
+}
+
+input[type="submit"] {
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    background: #cc9900;
+    color: white;
+    font-size: 16px;
+    font-family: OpenSans, sans-serif;
+    font-style: normal;
+    border: none;
+    margin-top: 30px;
+}
+
+footer {
+    height: 220px;
+    position: sticky;
+    background-color: black;
+    color: white;
+    padding: 58px 210px 50px 215px;
+    text-align: center;
+}
+
+footer.wrapper {
+    display: grid;
+    grid-template-columns: 370px 230px 400px;
+    grid-column-gap: 92px;
+}
+
+.footer-heading {
+    color: white;
+    font-family: 'Yeseva One', cursiv;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.footer-divider {
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+footer p {
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.payment {
+    margin-top: 45px;
+}
+
+.payment a {
+    display: inline-block;
+    width: 27px;
+    height: 22px;
+    background-image: url("../image/payment.png");
+}
+
+.pay1 {
+    background-position: -10px;
+}
+
+.paypal {
+    background-position: 35px;
+}
+
+.viza {
+    background-position: 69px;
+}
+
+.pay4 {
+    background-position: 103px;
+}
+
+.footer-social {
+    margin-top: 47px;
+}
+
+.footer-social a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("../image/footer-social.png");
+}
+
+.fb {
+    background-position: -10px;
+}
+
+.youtube {
+    background-position: -38px;
+}
+
+.twitter {
+    background-position: -70px;
+}
+
+.trello {
+    background-position: -97px;
+}
